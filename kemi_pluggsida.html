@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kemi – Plugga inför provet</title>
+<style>
+:root{--bg:#0b1220;--panel:#121e32;--panel2:#192943;--text:#edf4ff;--muted:#a9bad2;--accent:#68d5c3;--accent2:#8aa8ff;--good:#7ee0a1;--bad:#ff9b9b}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(145deg,#0b1220,#101d33);color:var(--text);font:16px/1.6 system-ui,Arial,sans-serif}
+header{padding:42px 20px 28px;text-align:center;background:radial-gradient(ellipse at top,#244568 0%,transparent 68%)}
+header h1{font-size:clamp(2rem,6vw,3.4rem);margin:0 0 8px}header p{color:var(--muted);margin:0}
+main{max-width:980px;margin:auto;padding:20px}.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 20px}
+button,.tab{border:1px solid #344967;background:var(--panel2);color:var(--text);padding:10px 15px;border-radius:12px;cursor:pointer;font-weight:650}
+button:hover,.tab.active{background:var(--accent);color:#09202a;border-color:var(--accent)}
+section.card{background:var(--panel);border:1px solid #263b59;border-radius:18px;padding:22px;margin:14px 0;box-shadow:0 12px 35px #0002}
+h2{margin-top:0;color:var(--accent)}h3{color:#c9d9ff;margin-bottom:5px}
+.small{color:var(--muted);font-size:.94rem}.pill{display:inline-block;background:#203b4a;color:#aaf1e4;border-radius:99px;padding:3px 10px;font-size:.82rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px}
+.tile{background:var(--panel2);padding:14px;border-radius:14px}
+table{border-collapse:collapse;width:100%;margin:12px 0}td,th{border:1px solid #344967;padding:9px;text-align:left}th{background:#203b4a}
+input[type=number],select{background:#0c1728;color:var(--text);border:1px solid #49617f;border-radius:9px;padding:9px;width:100%;margin:5px 0 12px}
+.quiz-q{padding:14px;background:var(--panel2);border-radius:13px;margin:12px 0}
+label{display:block;margin:7px 0;color:#dce8fa} .feedback{font-weight:700;margin-top:8px}.hidden{display:none}
+.atom{display:flex;align-items:center;gap:18px;flex-wrap:wrap}.nucleus{background:#263e61;border:2px solid var(--accent2);border-radius:50%;width:112px;height:112px;display:grid;place-content:center;text-align:center;font-weight:700}
+footer{text-align:center;color:var(--muted);padding:30px}
+</style>
+</head>
+<body>
+<header><span class="pill">Kemi • högstadiet</span><h1>Plugga inför kemiprovet</h1><p>Atomer, isotoper, periodiska systemet, joner och bindningar</p></header>
+<main>
+<div class="tabs">
+<button class="tab active" data-page="start">Översikt</button><button class="tab" data-page="atom">Atomer & isotoper</button><button class="tab" data-page="period">Periodiska systemet</button><button class="tab" data-page="joner">Joner & bindningar</button><button class="tab" data-page="quiz">Testa dig själv</button>
+</div>
+<div id="start" class="page">
+<section class="card"><h2>Så pluggar du</h2><p>Gå igenom ett område i taget. Läs förklaringen, försök säga den med egna ord och avsluta med quizet.</p><div class="grid">
+<div class="tile"><h3>1. Atomer</h3>Protoner, neutroner, elektroner och isotoper.</div><div class="tile"><h3>2. Periodiska systemet</h3>Perioder, grupper och grundämnesfamiljer.</div><div class="tile"><h3>3. Joner</h3>Elektroner tas upp eller lämnas bort.</div><div class="tile"><h3>4. Bindningar</h3>Jonbindning, molekylbindning och metallbindning.</div></div></section>
+<section class="card"><h2>Viktiga ord</h2><p><b>Grundämne:</b> ämne som bara består av en sorts atomer.</p><p><b>Kemisk förening:</b> ämne som består av minst två olika grundämnen som sitter ihop kemiskt.</p><p><b>Molekyl:</b> två eller flera atomer som sitter ihop med molekylbindningar.</p><p><b>Atomnummer:</b> antalet protoner i atomkärnan.</p></section>
+</div>
+<div id="atom" class="page hidden">
+<section class="card"><h2>Atomens delar</h2><div class="grid">
+<div class="tile"><h3>Proton</h3>Finns i atomkärnan. Har positiv laddning (+).</div><div class="tile"><h3>Neutron</h3>Finns i atomkärnan. Är oladdad (0).</div><div class="tile"><h3>Elektron</h3>Finns i elektronskalen runt kärnan. Har negativ laddning (−).</div></div>
+<p><b>Kom ihåg:</b> En neutral atom har lika många protoner som elektroner.</p>
+<div class="atom"><div class="nucleus">ATOM-<br>KÄRNA</div><div><b>Runt kärnan:</b><br>Elektroner finns i elektronskal.<br><span class="small">Skalmodellen är en förenklad bild av atomen.</span></div></div></section>
+<section class="card"><h2>Rita en enkel skalmodell</h2><p>Exempel: Kisel har atomnummer 14. Det betyder 14 protoner och, i en neutral atom, 14 elektroner. En vanlig kiselatom har 14 neutroner (kisel-28).</p><div class="grid"><div class="tile"><b>Atomkärnan</b><br>14 protoner<br>14 neutroner</div><div class="tile"><b>Elektronskal</b><br>Första skalet: 2 elektroner<br>Andra skalet: 8 elektroner<br>Tredje skalet: 4 elektroner</div></div>
+<p>Elektronerna fördelas alltså <b>2–8–4</b>.</p></section>
+<section class="card"><h2>Isotoper</h2><p>Isotoper är atomer av samma grundämne som har <b>samma antal protoner</b> men <b>olika antal neutroner</b>.</p><p>Exempel: kol-12 och kol-14 har båda 6 protoner, men olika antal neutroner.</p><ul><li>Inom sjukvården används vissa radioaktiva isotoper för undersökningar och behandlingar.</li><li>Kol-14 används för att åldersbestämma gammalt organiskt material, till exempel arkeologiska fynd.</li></ul></section>
+</div>
+<div id="period" class="page hidden">
+<section class="card"><h2>Periodiska systemet</h2><p>Grundämnena är ordnade efter stigande atomnummer.</p><div class="grid"><div class="tile"><h3>Period</h3>Vågrät rad. Visar hur många elektronskal atomen har.</div><div class="tile"><h3>Grupp</h3>Lodrät kolumn. Ämnen i samma grupp har ofta liknande egenskaper. För huvudgrupperna visar gruppen antalet valenselektroner (med undantag för helium).</div></div><p><b>Valenselektroner</b> är elektronerna i atomens yttersta skal.</p><h3>Varför är systemet användbart?</h3><ul><li>Du kan se hur många protoner ett grundämne har genom atomnumret.</li><li>Du kan hitta ämnen som har liknande egenskaper.</li><li>Du kan förutsäga hur ämnen kan reagera med varandra.</li></ul></section>
+<section class="card"><h2>Tre viktiga grundämnesfamiljer</h2><div class="grid"><div class="tile"><h3>Alkalimetaller • grupp 1</h3>Mjuka metaller som reagerar mycket lätt. De har en valenselektron. Natrium finns i koksalt (natriumklorid).</div><div class="tile"><h3>Halogener • grupp 17</h3>Reaktiva icke-metaller. De har sju valenselektroner. Klor används bland annat för att desinficera poolvatten. Fluor ingår i ämnen som används i tandvård.</div><div class="tile"><h3>Ädelgaser • grupp 18</h3>Har fullt yttersta elektronskal och reagerar därför mycket sällan. Argon används bland annat som skyddsgas.</div></div></section>
+</div>
+<div id="joner" class="page hidden">
+<section class="card"><h2>Joner</h2><p>En jon är en atom eller atomgrupp som har elektrisk laddning eftersom antalet elektroner och protoner inte är lika.</p><div class="grid"><div class="tile"><h3>Positiv jon (+)</h3>Atomen har <b>lämnat bort</b> elektroner. Då finns fler protoner än elektroner.</div><div class="tile"><h3>Negativ jon (−)</h3>Atomen har <b>tagit upp</b> elektroner. Då finns fler elektroner än protoner.</div></div><p>Atomer bildar ofta joner för att få ett fullt valensskal, vilket brukar göra dem stabilare. Den stabila elektronstrukturen liknar ofta en ädelgas.</p></section>
+<section class="card"><h2>Tre typer av kemiska bindningar</h2><h3>1. Jonbindning</h3><p>En atom lämnar elektroner till en annan. Då bildas positiva och negativa joner som dras till varandra. Exempel: natriumklorid (NaCl), vanligt salt.</p><h3>2. Molekylbindning</h3><p>Atomer delar på elektronpar. Exempel: vatten (H₂O). Syreatomen delar elektronpar med två väteatomer.</p><div class="tile" style="text-align:center;font-size:1.2rem"><b>H — O — H</b><br><span class="small">Förenklad bild av vattenmolekylen</span></div><h3>3. Metallbindning</h3><p>Metallatomerna hålls ihop av gemensamma, rörliga valenselektroner som delas av många atomer. Det hjälper till att förklara varför metaller leder elektricitet och värme.</p></section>
+</div>
+<div id="quiz" class="page hidden">
+<section class="card"><h2>Testa dig själv</h2><p class="small">Välj ett svar på varje fråga och tryck sedan på Rätta svar.</p>
+<form id="quizform">
+<div class="quiz-q"><b>1. Vilken partikel har positiv laddning?</b><label><input type="radio" name="q1" value="a"> Elektron</label><label><input type="radio" name="q1" value="b"> Proton</label><label><input type="radio" name="q1" value="c"> Neutron</label></div>
+<div class="quiz-q"><b>2. Var finns neutronerna?</b><label><input type="radio" name="q2" value="a"> I atomkärnan</label><label><input type="radio" name="q2" value="b"> I elektronskalen</label><label><input type="radio" name="q2" value="c"> Utanför atomen</label></div>
+<div class="quiz-q"><b>3. Vad är en isotop?</b><label><input type="radio" name="q3" value="a"> Atomer med olika antal protoner</label><label><input type="radio" name="q3" value="b"> Samma antal protoner men olika antal neutroner</label><label><input type="radio" name="q3" value="c"> En negativ jon</label></div>
+<div class="quiz-q"><b>4. Vad visar en period?</b><label><input type="radio" name="q4" value="a"> Antal elektronskal</label><label><input type="radio" name="q4" value="b"> Antal neutroner</label><label><input type="radio" name="q4" value="c"> Atomens laddning</label></div>
+<div class="quiz-q"><b>5. Vad händer när en atom blir en positiv jon?</b><label><input type="radio" name="q5" value="a"> Den tar upp elektroner</label><label><input type="radio" name="q5" value="b"> Den lämnar bort elektroner</label><label><input type="radio" name="q5" value="c"> Den tappar protoner</label></div>
+<div class="quiz-q"><b>6. Vilken bindning innebär att atomer delar elektronpar?</b><label><input type="radio" name="q6" value="a"> Jonbindning</label><label><input type="radio" name="q6" value="b"> Metallbindning</label><label><input type="radio" name="q6" value="c"> Molekylbindning</label></div>
+<div class="quiz-q"><b>7. Vilken grupp finns ädelgaserna i?</b><label><input type="radio" name="q7" value="a"> Grupp 1</label><label><input type="radio" name="q7" value="b"> Grupp 17</label><label><input type="radio" name="q7" value="c"> Grupp 18</label></div>
+<button type="submit">Rätta svar</button><button type="button" id="reset">Börja om</button><p id="result" class="feedback" aria-live="polite"></p></form></section>
+</div>
+<footer>Lycka till på kemiprovet! ⭐</footer>
+</main>
+<script>
+const tabs=document.querySelectorAll('.tab'),pages=document.querySelectorAll('.page');
+tabs.forEach(t=>t.addEventListener('click',()=>{tabs.forEach(x=>x.classList.remove('active'));t.classList.add('active');pages.forEach(p=>p.classList.toggle('hidden',p.id!==t.dataset.page));window.scrollTo({top:0,behavior:'smooth'})}));
+const answers={q1:'b',q2:'a',q3:'b',q4:'a',q5:'b',q6:'c',q7:'c'};
+document.getElementById('quizform').addEventListener('submit',e=>{e.preventDefault();let score=0;for(const [q,a] of Object.entries(answers)){if(new FormData(e.target).get(q)===a)score++}const r=document.getElementById('result');r.textContent=`Du fick ${score} av 7 rätt! `+(score===7?'Snyggt jobbat!':score>=5?'Bra jobbat! Läs igenom det du missade.':'Fortsätt öva – läs igenom avsnitten och försök igen.');r.style.color=score>=5?'var(--good)':'var(--bad)'});
+document.getElementById('reset').addEventListener('click',()=>{document.getElementById('quizform').reset();document.getElementById('result').textContent=''});
+</script>
+</body></html>
